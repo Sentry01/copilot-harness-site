@@ -16,7 +16,7 @@ fi
 if [ ! -f frontend/package.json ]; then
   (cd frontend && npm create vite@latest . -- --template react && npm install)
 else
-  (cd frontend && npm install)
+  (cd frontend && npm install --include=dev)
 fi
 
 # Tailwind via CDN (no build step needed)
